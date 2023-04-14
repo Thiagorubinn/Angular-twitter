@@ -9,7 +9,8 @@
 		<!-- form -->
 		<div class="flex-1">
 			<!-- textarea -->
-			<textarea [(ngModel)]="tweetMessage" (input)="changeTweet()" [maxLength]="tweetMaxLenght" class="mb-2 bg-gray-200 focus:outline-none focus:shadow-outline focus:bg-gray-100 resize-none border-transparent
+			<textarea (keyup.enter)="sendTweet()"
+			[(ngModel)]="tweetMessage" (input)="changeTweet()" [maxLength]="tweetMaxLenght" class="mb-2 bg-gray-200 focus:outline-none focus:shadow-outline focus:bg-gray-100 resize-none border-transparent
 			rounded-lg py-2 p-x4 block w-full appearance-none lead-normal font-light placeholder-gray-700" rows="3" placeholder="What's happening...">
 		</textarea>
 		<!-- divider line -->
